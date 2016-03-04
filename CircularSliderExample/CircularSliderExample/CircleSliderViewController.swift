@@ -24,10 +24,9 @@ class CircleSliderViewController: UIViewController {
     circularSlider.addTarget(self, action: Selector("valueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
     
     // setup slider defaults
-    circularSlider.unfilledArcLineCap = .Round
-    circularSlider.filledArcLineCap = .Round
+    circularSlider.handleType = .BigCircle
     circularSlider.currentValue = 10
-    circularSlider.lineWidth = 30
+    circularSlider.lineWidth = 10
     
     // add to view
     sliderView.addSubview(circularSlider)
