@@ -8,7 +8,7 @@
         <!--Arc-->
         <scene sceneID="jLw-md-UII">
             <objects>
-                <viewController id="eNz-6V-Va7" sceneMemberID="viewController">
+                <viewController id="eNz-6V-Va7" customClass="PartialCircleViewController" customModule="CircularSliderExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="56D-Zb-zpX"/>
                         <viewControllerLayoutGuide type="bottom" id="JMy-Ap-H2W"/>
@@ -16,9 +16,35 @@
                     <view key="view" contentMode="scaleToFill" id="JMS-g4-MKL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLn-a2-kVn">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Ylo-Rb-cer"/>
+                                    <constraint firstAttribute="height" constant="300" id="wuQ-2I-2pI"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8O-jw-uRD">
+                                <rect key="frame" x="279" y="28" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R8O-jw-uRD" firstAttribute="top" secondItem="56D-Zb-zpX" secondAttribute="bottom" constant="8" id="TMK-xx-GkJ"/>
+                            <constraint firstItem="YLn-a2-kVn" firstAttribute="centerY" secondItem="JMS-g4-MKL" secondAttribute="centerY" id="sAn-bm-LHh"/>
+                            <constraint firstItem="R8O-jw-uRD" firstAttribute="centerX" secondItem="JMS-g4-MKL" secondAttribute="centerX" id="vpZ-Si-icg"/>
+                            <constraint firstItem="YLn-a2-kVn" firstAttribute="centerX" secondItem="JMS-g4-MKL" secondAttribute="centerX" id="xRt-aJ-sxh"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Arc" id="ZUW-33-x6W"/>
+                    <connections>
+                        <outlet property="sliderValueLabel" destination="R8O-jw-uRD" id="f6F-VL-5nG"/>
+                        <outlet property="sliderView" destination="YLn-a2-kVn" id="wmd-21-aCQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyx-W8-bud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
