@@ -1,5 +1,5 @@
 //
-//  PartialCircleViewController.swift
+//  TwoHandleViewController.swift
 //  CircularSliderExample
 //
 //  Created by Christopher Olsen on 3/4/16.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-class PartialCircleViewController: UIViewController {
+class TwoHandleViewController: UIViewController {
   
-  @IBOutlet weak var sliderValueLabel: UILabel!
+  @IBOutlet weak var lowerValueLabel: UILabel!
+  @IBOutlet weak var upperValueLabel: UILabel!
   @IBOutlet weak var sliderView: UIView!
   
   override func viewDidLoad() {
@@ -18,26 +19,29 @@ class PartialCircleViewController: UIViewController {
     
     // init slider view
     let frame = CGRectMake(0, 0, sliderView.frame.width, sliderView.frame.height)
-    let circularSlider = CircularSlider(frame: frame)
+    let circularSlider = DoubleHandleCircularSlider(frame: frame)
     
     // setup target to watch for value change
     circularSlider.addTarget(self, action: Selector("valueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
     
-    // NOTE: sliderMaximumAngle must be set before currentValue
+    // setup slider defaults
+    // NOTE: sliderMaximumAngle must be set before currentValue and upperCurrentValue
     circularSlider.maximumAngle = 270.0
     circularSlider.unfilledArcLineCap = .Round
     circularSlider.filledArcLineCap = .Round
     circularSlider.currentValue = 10
+    circularSlider.upperCurrentValue = 60
     circularSlider.lineWidth = 30
     
     // add to view
     sliderView.addSubview(circularSlider)
     
-    // NOTE: create and set a transform to rotate the arc so the white space is centered at the bottom
+    // create and set a transform to rotate the arc so the white space is centered at the bottom
     circularSlider.transform = circularSlider.getRotationalTransform()
   }
   
-  func valueChanged(slider: CircularSlider) {
-    sliderValueLabel.text = "\(slider.currentValue)"
+  func valueChanged(slider: DoubleHandleCircularSlider) {
+    lowerValueLabel.text = "\(slider.currentValue)"
+    upperValueLabel.text = "\(slider.upperCurrentValue)"
   }
 }

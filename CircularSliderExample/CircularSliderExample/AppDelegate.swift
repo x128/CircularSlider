@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  CircularSliderExample
 //
-//  Created by Chris on 3/3/16.
-//  Copyright © 2016 caolsen. All rights reserved.
+//  Created by Christopher Olsen on 3/3/16.
+//  Copyright © 2016 Christopher Olsen. All rights reserved.
 //
 
 import UIKit

@@ -18,6 +18,7 @@
 		6730F29F1C8941CC00D1077E /* DoubleHandleCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6730F29A1C8941CC00D1077E /* DoubleHandleCircularSlider.swift */; };
 		6730F2A01C8941CC00D1077E /* GradientCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6730F29B1C8941CC00D1077E /* GradientCircularSlider.swift */; };
 		6730F2A21C8A289F00D1077E /* PartialCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6730F2A11C8A289F00D1077E /* PartialCircleViewController.swift */; };
+		6730F2A41C8A2B7200D1077E /* TwoHandleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6730F2A31C8A2B7200D1077E /* TwoHandleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		6730F29A1C8941CC00D1077E /* DoubleHandleCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleHandleCircularSlider.swift; sourceTree = "<group>"; };
 		6730F29B1C8941CC00D1077E /* GradientCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientCircularSlider.swift; sourceTree = "<group>"; };
 		6730F2A11C8A289F00D1077E /* PartialCircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartialCircleViewController.swift; sourceTree = "<group>"; };
+		6730F2A31C8A2B7200D1077E /* TwoHandleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoHandleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				6730F2751C89381200D1077E /* AppDelegate.swift */,
 				6730F2891C893D0C00D1077E /* CircleSliderViewController.swift */,
 				6730F2A11C8A289F00D1077E /* PartialCircleViewController.swift */,
+				6730F2A31C8A2B7200D1077E /* TwoHandleViewController.swift */,
 				6730F2791C89381200D1077E /* Main.storyboard */,
 				6730F27C1C89381200D1077E /* Assets.xcassets */,
 				6730F27E1C89381200D1077E /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 				6730F29D1C8941CC00D1077E /* CircularSliderHandle.swift in Sources */,
 				6730F29F1C8941CC00D1077E /* DoubleHandleCircularSlider.swift in Sources */,
 				6730F29E1C8941CC00D1077E /* CircularTrig.swift in Sources */,
+				6730F2A41C8A2B7200D1077E /* TwoHandleViewController.swift in Sources */,
 				6730F2761C89381200D1077E /* AppDelegate.swift in Sources */,
 				6730F29C1C8941CC00D1077E /* CircularSlider.swift in Sources */,
 				6730F2A21C8A289F00D1077E /* PartialCircleViewController.swift in Sources */,
