@@ -343,9 +343,15 @@ class CircularSlider: UIControl {
   
   func contextCoordinatesForLabelAtIndex(index: Int) -> CGRect {
     let label = innerMarkingLabels![index]
+    var percentageAlongCircle: CGFloat!
     
     // Determine how many degrees around the full circle this label should go
-    let percentageAlongCircle = ((100.0 / CGFloat(innerMarkingLabels!.count - 1)) * CGFloat(index)) / 100.0
+    if maximumAngle == 360.0 {
+      percentageAlongCircle = ((100.0 / CGFloat(innerMarkingLabels!.count)) * CGFloat(index + 1)) / 100.0
+    } else {
+      percentageAlongCircle = ((100.0 / CGFloat(innerMarkingLabels!.count - 1)) * CGFloat(index)) / 100.0
+    }
+
     let degreesFromNorthForLabel = percentageAlongCircle * maximumAngle
     let pointOnCircle = pointOnCircleAtAngleFromNorth(Int(degreesFromNorthForLabel))
     
