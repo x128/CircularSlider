@@ -11,6 +11,8 @@ This code is based on [EFCircularSlider](https://github.com/eliotfowler/EFCircul
 ## Examples
 The Xcode project in the `CirclularSliderExample/` directory contains examples of to to create various types of sliders (WIP). 
 
+<a href="http://imgur.com/wnMInBk"><img src="http://i.imgur.com/wnMInBk.png" title="source: imgur.com" /></a>
+
 ## Installation
 Copy the class files in the `CircularSlider/` directory into your Xcode project.
 
