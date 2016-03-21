@@ -50,6 +50,7 @@ class CircularSlider: UIControl {
       assert(newValue <= maximumValue && newValue >= minimumValue, "current value \(newValue) must be between minimumValue \(minimumValue) and maximumValue \(maximumValue)")
       // Update the angleFromNorth to match this newly set value
       angleFromNorth = Int((newValue * Float(maximumAngle)) / (maximumValue - minimumValue))
+      moveHandle(CGFloat(angleFromNorth))
       sendActionsForControlEvents(UIControlEvents.ValueChanged)
     } get {
         return (Float(angleFromNorth) * (maximumValue - minimumValue)) / Float(maximumAngle)
