@@ -21,7 +21,7 @@ class CircleSliderViewController: UIViewController {
     let circularSlider = CircularSlider(frame: frame)
     
     // setup target to watch for value change
-    circularSlider.addTarget(self, action: Selector("valueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    circularSlider.addTarget(self, action: #selector(CircleSliderViewController.valueChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
     
     // setup slider defaults
     circularSlider.handleType = .BigCircle

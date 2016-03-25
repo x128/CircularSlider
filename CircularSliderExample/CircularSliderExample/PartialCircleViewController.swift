@@ -21,7 +21,7 @@ class PartialCircleViewController: UIViewController {
     let circularSlider = CircularSlider(frame: frame)
     
     // setup target to watch for value change
-    circularSlider.addTarget(self, action: Selector("valueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    circularSlider.addTarget(self, action: #selector(PartialCircleViewController.valueChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
     
     // NOTE: sliderMaximumAngle must be set before currentValue
     circularSlider.maximumAngle = 270.0
