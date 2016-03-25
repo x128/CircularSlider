@@ -21,7 +21,7 @@ class WithLabelsViewController: UIViewController {
     let circularSlider = CircularSlider(frame: frame)
     
     // setup target to watch for value change
-    circularSlider.addTarget(self, action: Selector("valueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    circularSlider.addTarget(self, action: #selector(WithLabelsViewController.valueChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
     
     // setup slider defaults
     circularSlider.maximumAngle = 270.0

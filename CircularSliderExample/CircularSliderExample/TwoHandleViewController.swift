@@ -22,7 +22,7 @@ class TwoHandleViewController: UIViewController {
     let circularSlider = DoubleHandleCircularSlider(frame: frame)
     
     // setup target to watch for value change
-    circularSlider.addTarget(self, action: Selector("valueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    circularSlider.addTarget(self, action: #selector(TwoHandleViewController.valueChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
     
     // setup slider defaults
     // NOTE: sliderMaximumAngle must be set before currentValue and upperCurrentValue
