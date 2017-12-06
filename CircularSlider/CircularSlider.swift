@@ -320,7 +320,7 @@ class CircularSlider: UIControl {
   
   func drawInnerLabels(_ ctx: CGContext, rect: CGRect) {
     if let labels = innerMarkingLabels, labels.count > 0 {
-      let attributes = [NSFontAttributeName: labelFont, NSForegroundColorAttributeName: labelColor] as [String : Any]
+      let attributes: [NSAttributedStringKey : Any] = [.font: labelFont, .foregroundColor: labelColor]
       
       // Enumerate through labels clockwise
       for (index, label) in labels.enumerated() {
@@ -407,7 +407,7 @@ class CircularSlider: UIControl {
   }
   
   func sizeOfString(_ string: String, withFont font: UIFont) -> CGSize {
-    let attributes = [NSFontAttributeName: font]
+    let attributes = [NSAttributedStringKey.font: font]
     return NSAttributedString(string: string, attributes: attributes).size()
   }
   
